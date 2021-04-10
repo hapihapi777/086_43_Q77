@@ -63,7 +63,8 @@ class Monster {
                     comment.innerHTML += "戦闘に勝利した！";
                     if (maou.length === 1) {
                         comment.innerHTML += "<br>世界に平和が訪れた☆";// 魔王戦終了時
-
+                        bgm.pause();// bgm追加
+                        bgm.currentTime = 0;// bgm追加
                         Ending(1);
                         setTimeout(function () {
                             // ～何かの処理～

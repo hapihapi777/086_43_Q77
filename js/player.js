@@ -34,6 +34,12 @@ class Player {
     console.log(this.name + ": " + this.hp);
     this.Status();
 
+    let music = new Audio(); //効果音追加
+    music.preload = "auto"; // 効果音
+    music.src = "bgm/魔王魂  戦闘16.mp3";
+    // music.load();
+    music.play();
+
     // this.comment.innerHTML += "<br>";
     this.comment.innerHTML += "<br>" + name + "の反撃";
     this.comment.innerHTML += "<br>" + this.name + "は" + point + "のダメージを受けた";

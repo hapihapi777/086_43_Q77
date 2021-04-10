@@ -65,6 +65,10 @@ class Monster {
                         comment.innerHTML += "<br>世界に平和が訪れた☆";// 魔王戦終了時
                         bgm.pause();// bgm追加
                         bgm.currentTime = 0;// bgm追加
+                        bgm.src = "bgm/魔王魂  街14.mp3";
+                        bgm.play();
+                        bgm.loop = false;// bgm追加
+
                         Ending(1);
                         setTimeout(function () {
                             // ～何かの処理～

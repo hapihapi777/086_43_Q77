@@ -54,5 +54,8 @@ class Player {
   GameOver() {
     this.comment.innerHTML += "<br>" + this.name + "は 死んでしまった";
     document.getElementById('content').classList.add('noclick');
+    bgm.src = "bgm/魔王魂  旧ピアノ01.mp3";// bgm追加
+    bgm.play();// bgm追加
+    bgm.loop = true;// bgm追加
   }
 }

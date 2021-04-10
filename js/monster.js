@@ -53,10 +53,12 @@ class Monster {
                 comment.innerHTML += this.name + "をやっつけた！<br>";
                 // 勝利時コメントを追加
                 if (renda.length === sitai.length) {
-                    // bgm.stop();
-                    bgm.pause();
-                    bgm.currentTime = 0;
-                    
+                    // bgm.stop();// bgm追加
+                    bgm.pause();// bgm追加
+                    bgm.currentTime = 0;// bgm追加
+                    bgm.src = "bgm/魔王魂 旧ゲーム音楽 ダンジョン11.mp3";// bgm追加
+                    bgm.play();// bgm追加
+                    bgm.loop = true;// bgm追加
 
                     comment.innerHTML += "戦闘に勝利した！";
                     if (maou.length === 1) {

@@ -50,8 +50,9 @@ function LastBattle() {
   ];
 
   // let bgm = new Audio();
-  bgm.src = "bgm/魔王魂  オルゴール09.mp3";
-  bgm.play();
+  bgm.src = "bgm/魔王魂  オルゴール09.mp3";// bgm追加
+  bgm.play();// bgm追加
+  bgm.loop = true;// bgm追加
 
   let enemy = [];
   last_enemy_list.forEach(e => {
@@ -103,9 +104,9 @@ function Encounter(x) {
     enemy_list = LastBattle();
     comment.innerHTML = "魔王戦！</br>" + "絶対に負けられない戦いです！</br>";
   } else {
-    bgm.src = "bgm/魔王魂  旧ピアノ01.mp3";
-    bgm.play();
-
+    bgm.src = "bgm/魔王魂 旧ゲーム音楽 ダンジョン19.mp3";// bgm追加
+    bgm.play();// bgm追加
+    bgm.loop = true;// bgm追加
     comment.innerHTML = "";
     for (let i = 0; i < ninzuu; i++) {
       let n = Math.floor(Math.random() * enemies.length);
@@ -184,9 +185,4 @@ function Ending(n) {
     comment.innerHTML = kome[n];
   }, 3000);
   // comment.innerHTML += "</br>世界に平和が訪れた☆";// 魔王戦終了時
-}
-
-function stop() {
-  bgm.pause();
-  bgm.currentTime = 0;
 }
